@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+// import "./App.css";
+import "./style.css";
+import { randomizeArray } from "./utils.js";
+import Card from "./Card.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dataArr = [
+    { name: "limber", url: "https://pokeapi.co/api/v2/ability/7/" },
+    { name: "imposter", url: "https://pokeapi.co/api/v2/ability/150/" },
+    { name: "ditto", url: "https://pokeapi.co/api/v2/pokemon-form/132/" },
+    { name: "soulsilver", url: "https://pokeapi.co/api/v2/version/16/" },
+    { name: "alpha-sapphire", url: "https://pokeapi.co/api/v2/version/26/" },
+    { name: "leafgreen", url: "https://pokeapi.co/api/v2/version/11/" },
+  ];
+  // const [count, setCount] = useState(0);
+  const [data, setData] = useState(dataArr);
+
+  const handleClick = () => {
+    console.log("clicked");
+    setData(randomizeArray([...data]));
+    console.log(data);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1>Memory Game</h1>
+      <div className="cardContainer">
+        {data.map((elem) => {
+          return (
+            <Card
+              name={elem.name}
+              onClick={handleClick}
+              url={elem.url}
+              key={elem.name}
+            />
+          );
+        })}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
