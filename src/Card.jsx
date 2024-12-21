@@ -1,10 +1,15 @@
 import "./style.css";
 
-function Card({ imgURL, name, onClick }) {
+function Card({ name, handler, url }) {
+  const newHandleClick = () => {
+    handler(name);
+  };
+
   return (
     <>
-      <div className="card" onClick={onClick}>
+      <div className="card" onClick={newHandleClick}>
         <h2>{name}</h2>
+        <img src={url} />
       </div>
     </>
   );
