@@ -8,8 +8,8 @@ function Card({ name, handler, url }) {
   return (
     <>
       <div className="card" onClick={newHandleClick}>
-        <h2>{name}</h2>
         <img src={url} />
+        <p>{name}</p>
       </div>
     </>
   );

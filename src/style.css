@@ -1,16 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap");
+
+* {
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Original Surfer", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #f9fde5, #adc9a0);
+  height: 100vh;
+}
+
 .card {
-  padding: 10px;
-  border: 1px solid black;
+  border-radius: 1em;
   aspect-ratio: 1;
   display: flex;
   flex-direction: column;
+  background: rgb(17, 32, 8);
+  box-shadow: 5px 5px 8px rgba(135, 148, 135, 0.35);
+  /* font-weight: 200; */
+}
+
+.card:hover {
+  box-shadow: 5px 5px 8px rgba(219, 130, 7, 0.35);
+  transform: scale(1.01);
+  transition: box-shadow 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    transform 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 1.2em;
+  margin: 5px;
+  color: #f9ffd6;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.95em 0.95em 0 0;
 }
 
 .cardContainer {
-  /* border: 1px solid black; */
-  padding: 5px;
   display: grid;
-  gap: 5px;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.title {
+  margin: 5px;
+}
+.title h1 {
+  font-size: 3rem;
+  margin: 5px;
+}
+
+.title p {
+  font-size: 1rem;
+  color: rgb(34, 46, 37);
+}
+
+.scores h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
