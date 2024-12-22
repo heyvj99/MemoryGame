@@ -34,6 +34,9 @@ body {
   font-size: 1.2em;
   margin: 5px;
   color: #f9ffd6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img {
@@ -69,9 +72,10 @@ img {
 .title p {
   font-size: 1rem;
   color: rgb(34, 46, 37);
+  margin: 5px;
 }
 
 .scores h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }

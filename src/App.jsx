@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import "./style.css";
 import { randomizeArray } from "./utils.js";
 import Card from "./Card.jsx";
@@ -23,13 +23,9 @@ function App() {
       clickedArr.current.push(e);
       currentScore.current++;
     }
-
-    // console.log(currentScore.current);
-    // console.log(maxVal);
   };
 
   const handleClick = (name) => {
-    // console.dir(name);
     setData(randomizeArray([...data]));
     calcScore(name);
   };
