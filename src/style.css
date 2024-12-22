@@ -9,6 +9,7 @@
 body {
   background: linear-gradient(to bottom, #f9fde5, #adc9a0);
   height: 100vh;
+  margin: 20px 50px;
 }
 
 .card {
@@ -56,6 +57,9 @@ img {
 
 .title {
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .title h1 {
   font-size: 3rem;
