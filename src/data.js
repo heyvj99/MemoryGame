@@ -1,15 +1,15 @@
-import bison from "./assets/bison.png";
-import tiger from "./assets/tiger.png";
-import lion from "./assets/lion.png";
-import squirrel from "./assets/squirrel.png";
-import dog from "./assets/dog.png";
-import elephant from "./assets/elephant.png";
-import cat from "./assets/cat.png";
-import fox from "./assets/fox.png";
-import parrot from "./assets/parrot.png";
-import sheep from "./assets/sheep.png";
-import owl from "./assets/owl.png";
-import sealion from "./assets/sealion.png";
+import bison from "./assets/bison.jpg";
+import tiger from "./assets/tiger.jpg";
+import lion from "./assets/lion.jpg";
+import squirrel from "./assets/squirrel.jpg";
+import dog from "./assets/dog.jpg";
+import elephant from "./assets/elephant.jpg";
+import cat from "./assets/cat.jpg";
+import fox from "./assets/fox.jpg";
+import parrot from "./assets/parrot.jpg";
+import sheep from "./assets/sheep.jpg";
+import owl from "./assets/owl.jpg";
+import sealion from "./assets/sealion.jpg";
 
 const dataArr = [
   { name: "Bucky", url: bison },
