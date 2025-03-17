@@ -17,7 +17,7 @@ function App() {
     let elemlist = document.querySelectorAll(".card");
 
     Array.from(elemlist).forEach((element) => {
-      element.style.backgroundColor = "rgb(255, 192, 187)";
+      element.style.backgroundColor = "rgb(234, 198, 202)";
     });
 
     setTimeout(() => {
@@ -68,6 +68,9 @@ function App() {
       <>
         <div className="winningState">
           <h1>You Won!!!</h1>
+          <button className="btn" onClick={() => window.location.reload()}>
+            Play Again
+          </button>
         </div>
       </>
     );
