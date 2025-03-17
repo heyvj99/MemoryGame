@@ -7,6 +7,7 @@ import bgImage from "./assets/bg2.png";
 
 function App() {
   const [data, setData] = useState(dataArr);
+  const [gameWon, setGameWon] = useState(false);
 
   const currentScore = useRef(0);
   const clickedArr = useRef([]);
@@ -26,6 +27,10 @@ function App() {
     }, 1500);
   };
 
+  const showGameWon = () => {
+    setGameWon(true);
+  };
+
   const calcScore = (e) => {
     if (clickedArr.current.includes(e)) {
       let temp = Math.max(maxVal, currentScore.current);
@@ -37,6 +42,11 @@ function App() {
     } else {
       clickedArr.current.push(e);
       currentScore.current++;
+      if (currentScore.current == 12) {
+        console.log("game won");
+        showGameWon();
+      }
+
       return false;
     }
   };
@@ -51,6 +61,17 @@ function App() {
       setData(randomizeArray([...data]));
     }
   };
+
+  if (gameWon) {
+    console.log("game won");
+    return (
+      <>
+        <div className="winningState">
+          <h1>You Won!!!</h1>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
